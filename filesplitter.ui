@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FileSplitter</class>
+ <widget class="QMainWindow" name="FileSplitter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>556</width>
+    <height>174</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>FileSplitter</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabs">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="ViewSplit" name="tabSplit">
+       <attribute name="title">
+        <string>Split</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tabCombine">
+       <attribute name="title">
+        <string>Combine</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>556</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ViewSplit</class>
+   <extends>QWidget</extends>
+   <header>viewsplit.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
